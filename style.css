@@ -1,0 +1,148 @@
+/* Tema: Biru Langit Elegan + Gradasi Lembut */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f2f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #6cc8ff, #53a8f3);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px 80px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    animation: fadeInDown 1s ease;
+}
+
+header .icon {
+    font-size: 2.8rem;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+header p {
+    margin: 6px 0 0;
+    font-size: 1.05em;
+    opacity: 0.9;
+}
+
+/* Wave efek bawah header */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwMCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDE1MDAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAsMTIuNUMwLDEyLjUgMzAwLDAsNzUwLDEyLjVDMTIwMCwyNSAxNTAwLDAgMTUwMCwwVjUwSDBWMTEuNVoiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMjUiLz48L3N2Zz4=');
+    background-size: cover;
+}
+
+/* ===== MAIN CARD ===== */
+main {
+    max-width: 850px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+.card h2 {
+    color: #3498db;
+    margin-bottom: 18px;
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    background-color: #6cc8ff;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+button:hover {
+    background-color: #53a8f3;
+    transform: scale(1.05);
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #6cc8ff;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f7fbff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6cc8ff, #53a8f3);
+    color: white;
+    font-size: 0.9em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}

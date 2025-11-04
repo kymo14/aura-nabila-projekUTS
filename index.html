@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Antrian Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="icon">💳</div>
+            <div>
+                <h1>Sistem Antrian Bank</h1>
+                <p>Kelola dan pantau antrian pelanggan dengan mudah</p>
+            </div>
+        </div>
+        <div class="wave"></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Menu Utama</h2>
+            <div class="button-group">
+                <button onclick="tambahAntrian()">➕ Tambah Antrian</button>
+                <button onclick="panggilAntrian()">📢 Panggil Antrian</button>
+                <button onclick="hapusAntrian()">🗑️ Hapus Antrian</button>
+                <button onclick="tampilkanAntrian()">📋 Lihat Daftar</button>
+                <button onclick="rekapHarian()">📊 Rekap Harian</button>
+            </div>
+        </section>
+
+        <section id="output" class="card">
+            <h2>📄 Informasi Antrian</h2>
+            <div id="hasil" class="hasil">Belum ada data antrian.</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sistem Antrian Bank | Dibuat dengan 💙 oleh Kang Admin</p>
+    </footer>
+
+    <script>
+        let antrian = [];
+        let noUrut = 1;
+
+        function tambahAntrian() {
+            let nama = prompt("Masukkan nama pengunjung:");
+            if (!nama) return;
+
+            let jenis = prompt("Pilih layanan: A = Teller, B = Customer Service").toUpperCase();
+            if (jenis !== "A" && jenis !== "B") {
+                alert("Kode layanan salah! Gunakan A atau B.");
+                return;
+            }
+
+            let kode = jenis + noUrut.toString().padStart(3, "0");
+            antrian.push({ kode, nama, jenis });
+            noUrut++;
+            tampilkanAntrian();
+        }
+
+        function tampilkanAntrian() {
+            let hasil = document.getElementById("hasil");
+            if (antrian.length === 0) {
+                hasil.innerHTML = "<p>Tidak ada antrian saat ini.</p>";
+                return;
+            }
+
+            let tabel = `
+                <table>
+                    <tr>
+                        <th>No. Antrian</th>
+                        <th>Nama</th>
+                        <th>Layanan</th>
+                    </tr>
+            `;
+            antrian.forEach(a => {
+                tabel += `
+                    <tr>
+                        <td>${a.kode}</td>
+                        <td>${a.nama}</td>
+                        <td>${a.jenis === "A" ? "Teller" : "Customer Service"}</td>
+                    </tr>
+                `;
+            });
+            tabel += "</table>";
+            hasil.innerHTML = tabel;
+        }
+
+        function panggilAntrian() {
+            if (antrian.length === 0) {
+                alert("Tidak ada antrian untuk dipanggil!");
+                return;
+            }
+
+            let dipanggil = antrian.shift();
+            alert(`📢 Memanggil antrian ${dipanggil.kode} - ${dipanggil.nama}`);
+            tampilkanAntrian();
+        }
+
+        function hapusAntrian() {
+            if (antrian.length === 0) {
+                alert("Tidak ada antrian yang bisa dihapus!");
+                return;
+            }
+
+            let kodeHapus = prompt("Masukkan kode antrian yang ingin dihapus (contoh: A001):");
+            let index = antrian.findIndex(a => a.kode === kodeHapus);
+
+            if (index === -1) {
+                alert("Kode antrian tidak ditemukan!");
+                return;
+            }
+
+            antrian.splice(index, 1);
+            alert(`Antrian ${kodeHapus} berhasil dihapus.`);
+            tampilkanAntrian();
+        }
+
+        function rekapHarian() {
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = `<p>Total antrian hari ini: <b>${noUrut - 1}</b></p>`;
+        }
+    </script>
+</body>
+</html>
