@@ -1,4 +1,3 @@
-/* Tema: Biru Langit Elegan + Gradasi Lembut */
 body {
     font-family: "Poppins", sans-serif;
     background: #f2f8ff;
@@ -9,7 +8,7 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #6cc8ff, #53a8f3);
+    background: linear-gradient(135deg, #f7e194, #f7d063);
     color: white;
     text-align: center;
     position: relative;
