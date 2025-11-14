@@ -6,9 +6,8 @@ body {
     padding: 0;
 }
 
-/* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #f7e194, #f7d063);
+    background: linear-gradient(135deg, #86f173, #60f353ff);
     color: white;
     text-align: center;
     position: relative;
@@ -41,7 +40,6 @@ header p {
     opacity: 0.9;
 }
 
-/* Wave efek bawah header */
 .wave {
     position: absolute;
     bottom: 0;
@@ -52,7 +50,6 @@ header p {
     background-size: cover;
 }
 
-/* ===== MAIN CARD ===== */
 main {
     max-width: 850px;
     margin: -50px auto 40px;
@@ -70,11 +67,10 @@ main {
 }
 
 .card h2 {
-    color: #3498db;
+    color: #60f353ff;
     margin-bottom: 18px;
 }
 
-/* ===== BUTTONS ===== */
 .button-group {
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +79,7 @@ main {
 }
 
 button {
-    background-color: #6cc8ff;
+    background-color: #86f173;
     border: none;
     color: #fff;
     font-weight: 600;
@@ -95,11 +91,10 @@ button {
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 button:hover {
-    background-color: #53a8f3;
+    background-color: #60f353ff;
     transform: scale(1.05);
 }
 
-/* ===== TABLE ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,23 +109,21 @@ th, td {
 }
 
 th {
-    background-color: #6cc8ff;
+    background-color: #86f173;
     color: white;
 }
 tr:nth-child(even) {
     background-color: #f7fbff;
 }
 
-/* ===== FOOTER ===== */
 footer {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #6cc8ff, #53a8f3);
+    background: linear-gradient(135deg, #86f173, #60f353ff);
     color: white;
     font-size: 0.9em;
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
