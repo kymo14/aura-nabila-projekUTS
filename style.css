@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #86f173, #60f353ff);
+    background: linear-gradient(135deg, #e671ac, rgb(243, 83, 126));
     color: white;
     text-align: center;
     position: relative;
@@ -67,7 +67,7 @@ main {
 }
 
 .card h2 {
-    color: #60f353ff;
+    color: rgb(243, 83, 126);
     margin-bottom: 18px;
 }
 
@@ -79,7 +79,7 @@ main {
 }
 
 button {
-    background-color: #86f173;
+    background-color: #e671ac;
     border: none;
     color: #fff;
     font-weight: 600;
@@ -91,7 +91,7 @@ button {
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 button:hover {
-    background-color: #60f353ff;
+    background-color: rgb(243, 83, 126);
     transform: scale(1.05);
 }
 
@@ -109,7 +109,7 @@ th, td {
 }
 
 th {
-    background-color: #86f173;
+    background-color: #e671ac;
     color: white;
 }
 tr:nth-child(even) {
@@ -119,7 +119,7 @@ tr:nth-child(even) {
 footer {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #86f173, #60f353ff);
+    background: linear-gradient(135deg, #e671ac, rgb(243, 83, 126));
     color: white;
     font-size: 0.9em;
 }
